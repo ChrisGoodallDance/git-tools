@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "git-tools", "git-tools\git-tools.csproj", "{861377F5-3361-4534-A995-823EC8DDD330}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{861377F5-3361-4534-A995-823EC8DDD330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861377F5-3361-4534-A995-823EC8DDD330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861377F5-3361-4534-A995-823EC8DDD330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861377F5-3361-4534-A995-823EC8DDD330}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
