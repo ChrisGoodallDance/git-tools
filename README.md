@@ -3,7 +3,7 @@ CLI to execute git commands over multiple directories.
 
 Requires the .NET 7 SDK
 
-## Usage
+## Usage
 
 Build the tools, then add an alias to your bash profile. E.g.
 
