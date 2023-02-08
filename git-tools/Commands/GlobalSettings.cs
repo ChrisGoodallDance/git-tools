@@ -1,4 +1,4 @@
-namespace git_tools.Settings;
+namespace git_tools.Commands;
 
 public class GlobalSettings : CommandSettings
 {

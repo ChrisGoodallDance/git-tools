@@ -3,6 +3,11 @@ namespace git_tools.Commands;
 [Description("Show the contents of a file")]
 internal sealed class CatCommand : AsyncCommand<CatCommand.Settings>
 {
+    public static void Register(IConfigurator config)
+    {
+        config.AddCommand<CatCommand>("cat");
+    }
+    
     internal sealed class Settings : GlobalSettings
     {
         [Description("Outputs the contents of the file name")]

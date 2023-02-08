@@ -3,6 +3,12 @@ namespace git_tools.Commands;
 [Description("Compare contents of a file (BuildNumber.txt) with a tag")]
 internal sealed class CompareFileAndTagCommand : AsyncCommand<CompareFileAndTagCommand.Settings>
 {
+    public static void Register(IConfigurator config)
+    {
+        config.AddCommand<CompareFileAndTagCommand>("compare-tag")
+            .WithExample(new [] { "compare-tag", "BuildNumber.txt", "--tag-prefix", "release" });
+    }
+    
     internal sealed class Settings : GlobalSettings
     {
         [Description("File to compare")]

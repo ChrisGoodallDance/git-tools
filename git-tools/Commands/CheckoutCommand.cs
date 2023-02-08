@@ -3,6 +3,11 @@ namespace git_tools.Commands;
 [Description("Perform a checkout")]
 internal sealed class CheckoutCommand : PerformCommand<CheckoutCommand.Settings>
 {
+    public static void Register(IConfigurator config)
+    {
+        config.AddCommand<CheckoutCommand>("checkout");
+    }
+    
     internal sealed class Settings : GlobalSettings
     {
         [Description("Branch name")]

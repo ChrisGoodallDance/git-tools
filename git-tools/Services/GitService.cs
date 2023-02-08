@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using git_tools.Commands;
 
 namespace git_tools.Services;
 
@@ -62,9 +63,8 @@ internal sealed class GitService : IGitService
 
     public async Task<string?> GetTagAsync(string prefix, DirectoryInfo directory)
     {
-        //var command = "tag --list '" + prefix + "*' --sort=v:refname | tail -1";
-        var command = "describe --tags";
-        var runResult = await _processService.RunAsync($"git -C \"{directory.FullName}\" {command}", directory);
+        var command = "tag --list '" + prefix + "*' --sort=v:refname | tail -1";
+        var runResult = await _processService.RunAsync($"git -C \"{directory.FullName}\" {command} -q", directory);
         
         return runResult.Status == RunStatus.Success ? runResult.Message : null;
     }

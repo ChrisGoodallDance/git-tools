@@ -3,6 +3,12 @@ namespace git_tools.Commands;
 [Description("Open all repositories in web browser")]
 internal sealed class LinksCommand : AsyncCommand<LinksCommand.Settings>
 {
+    public static void Register(IConfigurator config)
+    {
+        config.AddCommand<LinksCommand>("links")
+            .WithExample(new [] { "links", "--open" });
+    }
+    
     internal sealed class Settings : GlobalSettings
     {
         [Description("Open the repository links in the browser")]

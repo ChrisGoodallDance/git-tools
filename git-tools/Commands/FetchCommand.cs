@@ -3,6 +3,11 @@ namespace git_tools.Commands;
 [Description("Perform a fetch")]
 internal sealed class FetchCommand : PerformCommand<FetchCommand.Settings>
 {
+    public static void Register(IConfigurator config)
+    {
+        config.AddCommand<FetchCommand>("fetch");
+    }
+    
     internal sealed class Settings : GlobalSettings
     {
         [CommandOption("--prune")]

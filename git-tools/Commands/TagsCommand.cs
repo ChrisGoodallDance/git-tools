@@ -3,6 +3,13 @@ namespace git_tools.Commands;
 [Description("Show latest tags on current branch")]
 internal sealed class TagsCommand : AsyncCommand<TagsCommand.Settings>
 {
+    public static void Register(IConfigurator config)
+    {
+        config.AddCommand<TagsCommand>("tags")
+            .WithExample(new [] {"tags", "release" })
+            .WithExample(new [] { "tags", "release", "--path", "./path/to/git/repo" });
+    }
+    
     internal sealed class Settings : GlobalSettings
     {
         [Description("Perform a FETCH operation before searching the tags")]
